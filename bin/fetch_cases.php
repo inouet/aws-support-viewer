@@ -27,13 +27,27 @@ use Ulrichsg\Getopt\Option;
 
 function get_options()
 {
-    $options   = [];
-    $options[] = (new Option(null, 'status', Getopt::REQUIRED_ARGUMENT))->setArgument(
-        new Argument('open', 'is_string')
-    );
-    $options[] = (new Option(null, 'profile', Getopt::REQUIRED_ARGUMENT));
-    $options[] = (new Option(null, 'days', Getopt::OPTIONAL_ARGUMENT))->setArgument(new Argument(365, 'is_numeric'));
-    $getopt    = new Getopt($options);
+    $options = [];
+
+    // status
+    $options[] = (new Option(null, 'status', Getopt::REQUIRED_ARGUMENT))
+        ->setArgument(new Argument('open', 'is_string'))
+        ->setDescription('[ all | open ]')->setValidation(
+            function ($value) {
+                return in_array($value, ['open', 'all'], true);
+            }
+        );
+
+    // profile
+    $options[] = (new Option(null, 'profile', Getopt::REQUIRED_ARGUMENT))
+        ->setDescription('AWS profile  eg. "develop,production"');
+
+    // days
+    $options[] = (new Option(null, 'days', Getopt::OPTIONAL_ARGUMENT))
+        ->setArgument(new Argument(365, 'is_numeric'))
+        ->setDescription('number of days');
+
+    $getopt = new Getopt($options);
 
     try {
         $getopt->parse();
