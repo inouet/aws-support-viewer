@@ -30,7 +30,7 @@ Results: <?php e(number_format($total_count)) ?>
         <td nowrap><?php ucw($row['service_code']) ?></td>
         <td nowrap><?php ucw($row['severity_code']) ?></td>
 
-        <td nowrap><?php e($row['status']) ?></td>
+        <td nowrap><?php ucw($row['status']) ?></td>
     </tr>
 <?php endforeach; ?>
 </table>
