@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 /**
  * fetch_cases.php
