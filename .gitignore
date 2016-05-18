@@ -3,3 +3,5 @@ logs/
 data/attachments/
 data/cases/
 data/db/
+composer.lock
+.idea/
