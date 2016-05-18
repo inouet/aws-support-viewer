@@ -40,7 +40,7 @@ function get_options()
         $options = $getopt->getOptions();
 
         if (!isset($options['profile']) || !isset($options['status'])) {
-            echo 'Error: Option profile and status is required';
+            echo 'Error: Option profile and status is required' . PHP_EOL;
             echo $getopt->getHelpText();
             exit(1);
         }
@@ -234,9 +234,8 @@ function fetch_attachments($aws_profile_name, $attachment_set)
         ];
         $result = $client->describeAttachment($params);
 
-        // var_dump($result['attachment']['fileName']);
         file_put_contents($file, $result['attachment']['data']);
-        $logger->info("save attachment", $file);
+        $logger->info("save attachment", [$file]);
     }
 }
 
