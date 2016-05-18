@@ -1,0 +1,17 @@
+{
+    "require": {
+        "php": ">=5.5.0",
+        "aws/aws-sdk-php": "3.*",
+        "j4mie/idiorm": "1.5.1",
+        "monolog/monolog": "1.19.*",
+        "slim/slim":  "^3.0",
+        "jasongrimes/paginator": "~1.0",
+        "slim/php-view": "*",
+        "ulrichsg/getopt-php": "2.3.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": ["lib/"]
+        }
+    }
+}

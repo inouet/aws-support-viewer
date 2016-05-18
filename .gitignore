@@ -1,0 +1,5 @@
+vendor/
+logs/
+data/attachments/
+data/cases/
+data/db/
