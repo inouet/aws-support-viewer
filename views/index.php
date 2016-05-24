@@ -1,6 +1,6 @@
 <?php include_once('_header.php') ?>
 
-<h1>Cases</h1>
+<h1>AWS Support Cases</h1>
 
 <form method="get" action="/">
     Query: <input type="text" name="query" value="<?php e(@$_GET['query'])?>">

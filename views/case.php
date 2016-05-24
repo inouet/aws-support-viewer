@@ -1,6 +1,6 @@
 <?php include_once('_header.php') ?>
 
-<h2>Case Details</h2>
+<h2>AWS Support Case Details</h2>
 
 <table border="0" width="90%">
     <tr>
