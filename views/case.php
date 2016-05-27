@@ -1,5 +1,8 @@
 <?php include_once('_header.php') ?>
 
+<div class="blank">
+   <div class="blank-page">
+
 <h2>AWS Support Case Details</h2>
 
 <table border="0" width="90%">
@@ -72,6 +75,9 @@
     </table>
     <br/>
 <?php endforeach; ?>
+
+</div>
+</div>
 
 <?php include_once('_footer.php') ?>
 
