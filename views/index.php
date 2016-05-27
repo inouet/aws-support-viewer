@@ -27,7 +27,7 @@
     </tr>
     </thead>
     <tbody>
-<?php foreach ($case_list as $row): ?>
+    <?php foreach ($case_list as $row): ?>
     <tr>
         <td nowrap><?php e($row['time_created']) ?></td>
 
@@ -41,14 +41,14 @@
 
         <td nowrap><?php ucw($row['status']) ?></td>
     </tr>
-<?php endforeach; ?>
+    <?php endforeach; ?>
 </tbody>
 </table>
 
 <?php echo $paginator; ?>
 
-</div>
-</div>
+  </div><!-- //blank-page -->
+</div><!-- //div blank -->>
 
 <?php include_once('_footer.php') ?>
 
